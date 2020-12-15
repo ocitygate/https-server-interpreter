@@ -1,5 +1,5 @@
-MyDBApp 
-̅̅̅̅̅̅̅
+MyDBApp
+=======
 
 
 What is MyDBApp?
@@ -13,7 +13,8 @@ HTML + MySQL + MyDBApp = :)
 
 
 MyDBApp Language
-̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+----------------
+
 echo <html>
 
 out <expression>
