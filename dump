@@ -1,5 +1,8 @@
 if not isset(level)
   let level := 0
+/if
+
+if level = 0
   echo <table style="white-space: pre; ">
 /if
 
