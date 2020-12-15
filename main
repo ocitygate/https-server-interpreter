@@ -1,0 +1,57 @@
+let message := 'Hello world!'
+
+echo HTTP/1.1 200 OK
+echo Content-Type: text/html
+echo
+
+echo <!DOCTYPE html>
+echo <html>
+echo <head>
+echo <title>$(message)</title>
+echo <style>
+echo * { font-family: Verdana; vertical-align: top; }
+echo table { border-collapse: collapse; white-space: nowrap; }
+echo td { border: solid 1px; }
+echo .div1 { background: blue; }
+echo .div2 { background: red; }
+echo .div3 { background: green; }
+echo </style>
+echo </head>
+echo <body>
+
+echo <h1>$(message)</h1>
+
+echo <table>
+
+for y : range(10)
+
+  echo <tr>
+
+  for x : range(1, 11)
+  
+    let z := x + y * 10
+  
+    if z mod 3 = 0
+      echo <td class="div3 ">$(z)</td>
+    elif z mod 2 = 0
+      echo <td class="div2 ">$(z)</td>
+    else
+      echo <td class="div1 ">$(z)</td>
+    /if
+  
+  /for
+
+  echo </tr>
+
+/for
+
+echo </table>
+
+echo <br/>
+
+let dump.node := .
+
+call dump dump
+
+echo </body>
+echo </html>

@@ -1,0 +1,42 @@
+if not isset(level)
+  let level := 0
+  echo <table style="white-space: pre; ">
+/if
+
+for key : value : node
+  if key <> 'dump' or level <> 0
+
+    if level = 0
+      let style := 'font-weight: bold; font-size: 14px; background: #7f7fff; '
+    elif level = 1
+      let style := 'font-size: 14px; background: #ff7f7f; '
+    elif level = 2
+      let style := 'font-size: 12px; background: #7fff7f; '
+    elif level >= 3
+      let style := 'font-size: 10px; background: #ffff5f; '
+    /if
+
+    echo <tr style="$(style)">
+    
+    let key_ := ''
+    for i : range(level)
+      let key_ := key_ || '    '
+    /for
+    let key_ := key_ || key
+    
+    echo <td>$(key_)</td>
+    echo <td>$(value)</td>
+    echo </tr>
+
+    if istree(value)
+      let dump.node := value
+      let dump.level := level + 1
+      call dump dump
+    /if
+  
+  /if
+/for
+
+if level = 0
+  echo </table>
+/if

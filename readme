@@ -1,0 +1,46 @@
+MyDBApp 
+̅̅̅̅̅̅̅
+
+
+What is MyDBApp?
+
+* HTTP/S Server
+* Interpreter
+
+
+HTML + MySQL + MyDBApp = :)
+
+
+
+MyDBApp Language
+̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅̅
+echo <html>
+
+out <expression>
+
+if <condition>
+elif <condition>
+else
+/if
+
+while <condition>
+/while
+
+for [<key> :] <value> : <list>
+/for
+
+let <expression>
+
+exception <message>
+
+return
+
+call <function> <variable>
+
+exit
+
+sql <sql>
+/sql
+
+SQL <variable> : <database> : <sql>
+/SQL
